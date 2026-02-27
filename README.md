@@ -1,21 +1,30 @@
-# SelfRefineGAN
-This repository contains the code for our paper:
-Enhancing Low-Light Image Quality with Self-RefineGAN: A Lightweight GAN Approach
+# Enhancing Low-Light Image Quality with Self-RefineGAN: A Lightweight GAN Approach
 
-## 🚀 Status
-Official implementation of the Self-RefineGAN. Code and pre-trained models will be released upon paper publication.
+Official PyTorch implementation of **Self-RefineGAN**, a lightweight Generative Adversarial Network designed for high-fidelity low-light image enhancement on resource-constrained edge devices.
+
+
+
+## 🚀 Overview
+Self-RefineGAN addresses the trade-off between enhancement quality and computational efficiency. Our framework introduces a training paradigm where a **Refinement Network (RFN)** guides an **Extreme Lightweight Residual Gated Network (XLRGN)**.
+
+* **Training Phase:** XLRGN and RFN are trained iteratively using a combination of Adversarial, Perceptual, and Texture Energy Loss.
+* **Inference Phase:** The RFN is decoupled, leaving only the ultra-lightweight XLRGN (0.025M parameters) for real-time deployment.
+
+## ✨ Key Contributions
+* **XLRGN Generator:** A gated residual network optimized for edge devices.
+* **Refinement Model (RFN):** A curriculum-based teacher network that improves training stability.
+* **Efficiency:** Achieves state-of-the-art results with only **3.69 GFLOPs**.
 
 ## 📊 Datasets
 The following datasets were used for training and evaluating **Self-RefineGAN**:
 
-* **[LOLv1 Dataset](https://huggingface.co/datasets/geekyrakshit/LoL-Dataset)**: A low-light dataset containing 500 paired low-light and normal-light images.
-* **[LOLv2-Real and LOLv2-Synthetic Dataset](https://huggingface.co/datasets/okhater/lolv2-synthetic)**: This synthetic low-light dataset consists of 900 training images and 100 testing images.
-* **[MIT-Adobe FiveK Dataset](https://data.csail.mit.edu/graphics/fivek/)**: A large-scale dataset of 5,000 photos, each retouched by five different experts.
-* **[SICE Datse Google Drive:,Part1: 360 Image Sequences](https://drive.google.com/file/d/1HiLtYiyT9R7dR9DRTLRlUUrAicC4zzWN/view)**
-* **[SICE Datse Google Drive:,Part2: 229 Image Sequences](https://drive.google.com/file/d/16VoHNPAZ5Js19zspjFOsKiGRrfkDgHoN/view)**
+* **[LOLv1 Dataset](https://huggingface.co/datasets/geekyrakshit/LoL-Dataset)**: 500 paired low-light/normal-light images.
+* **[LOLv2 Dataset](https://huggingface.co/datasets/okhater/lolv2-synthetic)**: Real and Synthetic subsets.
+* **[MIT-Adobe FiveK](https://data.csail.mit.edu/graphics/fivek/)**: 5,000 professionally retouched photos.
+* **[SICE Dataset](https://drive.google.com/file/d/1HiLtYiyT9R7dR9DRTLRlUUrAicC4zzWN/view)**: Multi-exposure image sequences.
 
-Please ensure you have downloaded the data and placed it in the `data/` directory according to the structure defined in `config.py`.
+## ⚙️ Installation & Usage
 
-## 📬 Contact
-If you are a reviewer or researcher with urgent questions, 
-please contact the author at [matifblogger@gmail.com].
+### 1. Requirements
+```bash
+pip install torch torchvision numpy opencv-python matplotlib
