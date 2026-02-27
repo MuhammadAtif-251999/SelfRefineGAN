@@ -2,8 +2,6 @@
 
 Official PyTorch implementation of **Self-RefineGAN**, a lightweight Generative Adversarial Network designed for high-fidelity low-light image enhancement on resource-constrained edge devices.
 
-
-
 ## 🚀 Overview
 Self-RefineGAN addresses the trade-off between enhancement quality and computational efficiency. Our framework introduces a training paradigm where a **Refinement Network (RFN)** guides an **Extreme Lightweight Residual Gated Network (XLRGN)**.
 
@@ -23,8 +21,11 @@ The following datasets were used for training and evaluating **Self-RefineGAN**:
 * **[MIT-Adobe FiveK](https://data.csail.mit.edu/graphics/fivek/)**: 5,000 professionally retouched photos.
 * **[SICE Dataset](https://drive.google.com/file/d/1HiLtYiyT9R7dR9DRTLRlUUrAicC4zzWN/view)**: Multi-exposure image sequences.
 
-## ⚙️ Installation & Usage
+## 🚀 Status
+Official implementation of the Self-RefineGAN. Code and pre-trained models will be released upon paper publication.
 
-### 1. Requirements
-```bash
-pip install torch torchvision numpy opencv-python matplotlib
+## 📬 Contact
+If you are a reviewer or researcher with urgent questions, 
+please contact the author at [matifblogger@gmail.com].
+Muhammad Atif Department of Computer Science and Engineering
+Southeast University, Nanjing, China
