@@ -27,5 +27,7 @@ Official implementation of the Self-RefineGAN. Code and pre-trained models will 
 ## 📬 Contact
 If you are a reviewer or researcher with urgent questions, 
 please contact the author at [matifblogger@gmail.com].
+
 Muhammad Atif Department of Computer Science and Engineering
+
 Southeast University, Nanjing, China
