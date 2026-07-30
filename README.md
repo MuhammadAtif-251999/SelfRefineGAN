@@ -44,6 +44,64 @@ The following datasets were used for training and evaluating SelfRefineGAN:
 - [MIT-Adobe FiveK](https://data.csail.mit.edu/graphics/fivek/): 5,000 professionally retouched photographs.
 - [SICE Dataset](https://github.com/csjcai/SICE): Multi-exposure image sequences.
 
+## 📁 Project Structure
+
+```text
+SelfRefineGAN/
+├── assets/
+│   └── figures/
+│       ├── selfrefinegan_pipeline.jpg
+│       └── rfn_architecture.jpg
+├── configs/
+│   └── default.yaml
+├── docs/
+│   └── CODE_STRUCTURE.md
+├── selfrefine_gan/
+│   ├── blocks/
+│   │   ├── gated_residual.py
+│   │   └── refinement_residual.py
+│   ├── data/
+│   │   ├── dataset.py
+│   │   ├── file_pairs.py
+│   │   └── preprocessing.py
+│   ├── evaluation/
+│   │   ├── evaluator.py
+│   │   └── metrics.py
+│   ├── inference/
+│   │   └── predictor.py
+│   ├── losses/
+│   │   ├── charbonnier.py
+│   │   ├── generator_loss.py
+│   │   ├── refinement_loss.py
+│   │   └── texture_energy.py
+│   ├── models/
+│   │   ├── discriminator.py
+│   │   ├── generator.py
+│   │   ├── refinement_block.py
+│   │   └── refinement_network.py
+│   ├── training/
+│   │   ├── checkpoint.py
+│   │   ├── discriminator_step.py
+│   │   ├── generator_refinement_step.py
+│   │   ├── history.py
+│   │   ├── system.py
+│   │   └── trainer.py
+│   ├── utils/
+│   │   ├── image_io.py
+│   │   └── visualization.py
+│   ├── config.py
+│   └── runtime.py
+├── checkpoints/
+├── outputs/
+├── train.py
+├── infer.py
+├── evaluate.py
+├── requirements.txt
+├── pyproject.toml
+├── CITATION.cff
+├── LICENSE
+└── README.md
+```
 
 ## 📚 Citation
 
