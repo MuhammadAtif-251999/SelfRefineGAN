@@ -1,0 +1,52 @@
+# Original SelfRefineGAN settings.
+seed: 42
+gpu_memory_growth: true
+
+image:
+  height: 256
+  width: 256
+  channels: 3
+
+data:
+  # Required structure:
+  # train_root/input/*
+  # train_root/gt/*
+  # test_root/input/*
+  # test_root/gt/*
+  train_root: "D:/datasets/LOLv1/our485"
+  test_root: "D:/datasets/LOLv1/eval15"
+  max_train_images: 400
+  batch_size: 2
+  apply_resize: true
+  drop_remainder: true
+  shuffle: false
+
+training:
+  num_iterations: 500
+  generator_weight: 0.6
+  refinement_weight: 0.4
+  visualize_every: 10
+  checkpoint_every: 100
+
+optimizers:
+  generator_lr: 0.0002
+  discriminator_lr: 0.0009
+  refinement_lr: 0.0003
+  beta_1: 0.9
+  beta_2: 0.999
+
+losses:
+  generator:
+    ssim_weight: 0.3
+    mse_weight: 0.3
+    charbonnier_weight: 0.4
+    charbonnier_epsilon: 0.0001
+  refinement:
+    ssim_weight: 0.4
+    mse_weight: 0.4
+    texture_weight: 0.7
+
+output:
+  checkpoint_dir: "checkpoints"
+  visualization_dir: "outputs/visualizations"
+  history_csv: "outputs/training_history.csv"

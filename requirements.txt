@@ -1,0 +1,8 @@
+# Recommended Python version: 3.10
+tensorflow==2.15.1
+numpy==1.26.4
+Pillow==10.4.0
+matplotlib==3.8.4
+scikit-image==0.22.0
+PyYAML==6.0.2
+h5py==3.10.0

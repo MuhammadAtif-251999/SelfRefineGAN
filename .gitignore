@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Datasets and generated outputs
+data/
+datasets/
+checkpoints/*
+!checkpoints/.gitkeep
+outputs/*
+!outputs/inference/
+!outputs/evaluation/
+!outputs/visualizations/
+!outputs/inference/.gitkeep
+!outputs/evaluation/.gitkeep
+!outputs/visualizations/.gitkeep
+
+# Model files
+*.h5
+*.keras
+*.ckpt
+*.index
+*.data-*
+
+# Logs
+*.log
