@@ -25,7 +25,7 @@ SelfRefineGAN addresses the trade-off between enhancement quality and computatio
 
 <p align="center">
   <img src="./assets/figures/fig_1.jpg"
-       alt="SelfRefineGAN pipeline and XLRGN architecture"
+       alt="highlighting the training and inference phase"
        width="100%">
 </p>
 
