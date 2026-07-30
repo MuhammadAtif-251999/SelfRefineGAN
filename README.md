@@ -21,11 +21,21 @@ SelfRefineGAN addresses the trade-off between enhancement quality and computatio
 
 ### SelfRefineGAN Pipeline and XLRGN Architecture
 
+## 🖼 SelfRefineGAN Framework
+
+<p align="center">
+  <img src="./assets/figures/fig_1.jpg"
+       alt="SelfRefineGAN pipeline and XLRGN architecture"
+       width="100%">
+</p>
+
+**Figure 1.** Schematic representation of the proposed framework, highlighting the training and inference phase. (a) The powerful RFN is involved in the training to help in iterative learning and feature transfer for the XLRGN. (b) The large RFN and D are removed. Only the XLRGN is retained for inference to reduce latency, lower power consumption, and achieve high-fidelity output.
+
 <p align="center">
   <img src="assets/figures/selfrefinegan_pipeline.jpg" alt="SelfRefineGAN pipeline and XLRGN architecture" width="100%">
 </p>
 
-**Figure 1.** **(a) SelfRefineGAN pipeline:** A dual-stream framework that processes low-light and reference image pairs $(z, x)$. XLRGN is optimized using the generator loss $L_{XLRGN}$ and discriminator $D_{XLRGN}$, while RFN produces a refined image supervised by $L_{RFN}$ and $D_{RFN}$. Joint optimization uses weighted backpropagation with $\lambda = 0.4$ to maintain consistent learning between the refinement and lightweight generation streams. **(b) XLRGN architecture:** A symmetric encoder-decoder with skip connections and Gated Residual Fusion blocks. Each GRF block uses a gating branch with dense layers and sigmoid activation to generate attention weights, together with a parallel convolutional branch for feature extraction.
+**Figure 2.** **(a) SelfRefineGAN pipeline:** A dual-stream framework that processes low-light and reference image pairs $(z, x)$. XLRGN is optimized using the generator loss $L_{XLRGN}$ and discriminator $D_{XLRGN}$, while RFN produces a refined image supervised by $L_{RFN}$ and $D_{RFN}$. Joint optimization uses weighted backpropagation with $\lambda = 0.4$ to maintain consistent learning between the refinement and lightweight generation streams. **(b) XLRGN architecture:** A symmetric encoder-decoder with skip connections and Gated Residual Fusion blocks. Each GRF block uses a gating branch with dense layers and sigmoid activation to generate attention weights, together with a parallel convolutional branch for feature extraction.
 
 ### Proposed RFN Model Architecture
 
@@ -33,7 +43,7 @@ SelfRefineGAN addresses the trade-off between enhancement quality and computatio
   <img src="assets/figures/rfn_architecture.jpg" alt="Proposed Refinement Network architecture" width="100%">
 </p>
 
-**Figure 2.** The proposed **Refinement Network (RFN)** architecture. The network combines multi-feature fusion, an enhancement block, residual learning, SimAM attention, and feature concatenation to generate a refined enhanced output during training.
+**Figure 3.** The proposed **Refinement Network (RFN)** architecture. The network combines multi-feature fusion, an enhancement block, residual learning, SimAM attention, and feature concatenation to generate a refined enhanced output during training.
 
 ## 📊 Datasets
 
