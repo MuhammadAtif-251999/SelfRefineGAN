@@ -44,7 +44,6 @@ The following datasets were used for training and evaluating SelfRefineGAN:
 - [MIT-Adobe FiveK](https://data.csail.mit.edu/graphics/fivek/): 5,000 professionally retouched photographs.
 - [SICE Dataset](https://github.com/csjcai/SICE): Multi-exposure image sequences.
 
-## 📁 Project Structure
 
 ```text
 SelfRefineGAN/
