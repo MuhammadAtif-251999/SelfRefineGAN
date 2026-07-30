@@ -19,8 +19,6 @@ SelfRefineGAN addresses the trade-off between enhancement quality and computatio
 
 ## 🖼️ Architecture
 
-### SelfRefineGAN Pipeline and XLRGN Architecture
-
 ## 🖼 SelfRefineGAN Framework
 
 <p align="center">
@@ -30,6 +28,8 @@ SelfRefineGAN addresses the trade-off between enhancement quality and computatio
 </p>
 
 **Figure 1.** Schematic representation of the proposed framework, highlighting the training and inference phase. (a) The powerful RFN is involved in the training to help in iterative learning and feature transfer for the XLRGN. (b) The large RFN and D are removed. Only the XLRGN is retained for inference to reduce latency, lower power consumption, and achieve high-fidelity output.
+
+### SelfRefineGAN Pipeline and XLRGN Architecture
 
 <p align="center">
   <img src="assets/figures/selfrefinegan_pipeline.jpg" alt="SelfRefineGAN pipeline and XLRGN architecture" width="100%">
